@@ -14,10 +14,78 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
+      .container-iseng {
+        padding: 60px 0px;
+      }
+      .kecil {
+        font: 400 15px Montserrat, sans-serif;
+      }
+      footer {
+          background-color: #ADD8E6;; /* Light blue */
+      color: #333;
+      font-family: Arial, sans-serif;
+      padding: 20px 0;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 10px;
+        min-width: 250px;
+      }
+
+      .footer-logo {
+        transform:scale(3.5);
+        width: 50px;
+        margin-bottom: 10px;
+      }
+      .footer-logo2 {
+        transform:scale(3);
+        width: 50px;
+        margin-bottom: 10px;
+      }
+
+      .footer-section h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .footer-section p {
+        margin: 5px 0;
+      }
+
+      .footer-section a {
+        color: #007BFF; /* Link color */
+        text-decoration: none;
+      }
+
+      .footer-section a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-bottom {
+        background-color: #4f99b3; /* Darker blue */
+        text-align: center;
+        padding: 10px 0;
+        color: white;
+        font-size: 14px;
+      }
+
       body {
         font: 400 15px Lato, sans-serif;
         line-height: 1.8;
         color: #818181;
+        min-height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
       }
       h1 {
         font-size: 24px;
@@ -42,7 +110,7 @@
       }
       .responsive2 {
         width: 100%; /* Image will span the width of its container */
-        max-width: 300px; /* Prevents it from exceeding the original width */
+        max-width: 350px; /* Prevents it from exceeding the original width */
         height: auto; /* Maintains aspect ratio */
         display: block; /* Removes inline spacing in some browsers */
         margin: 0 auto; /* Centers the image horizontally if it's smaller than its container */
@@ -62,13 +130,29 @@
         margin: 0 auto; /* Centers the image horizontally if it's smaller than its container */
       }
       .container-fluid {
-        padding: 60px 0px;
+        padding: 100px 0px;
+      }
+      .container-fluid1 {
+        padding: 100px 0px;
+      }
+      .container-fluid2 {
+        padding: 20px 0px;
+        margin-bottom: 100px;
       }
       .container-beda {
-        padding: 150px 0px;
+        padding: 90px 0px;
+      }
+      .container-footer {
+        padding: 50px 0px;
+      }
+      .bg-blue{
+        background-color: #ADD8E6;
+      }
+      .bg-blue-marine {
+        background-color: #CAE9F5B5;
       }
       .bg-grey {
-        background-color: #f6f6f6;
+        background-color: #ffffff;
       }
       .logo-small {
         color: #f4511e;
@@ -79,7 +163,7 @@
         font-size: 200px;
       }
       .thumbnail {
-        padding: 0 0 15px 0;
+        padding: 5px 0 15px 0;
         border: none;
         border-radius: 0;
       }
@@ -87,17 +171,13 @@
         width: 100%;
         height: 100%;
         margin-bottom: 10px;
+        background-color: aqua;
       }
-      .carousel-control.right,
-      .carousel-control.left {
-        background-image: none;
-        color: #f4511e;
-      }
-      .carousel-indicators li {
-        border-color: #f4511e;
-      }
-      .carousel-indicators li.active {
-        background-color: #f4511e;
+      .font-montserrat {
+        font-size: 10px;
+        font: 400 20px Montserrat, sans-serif;
+        color: #303030;
+        margin-bottom: 30px;
       }
       .item h4 {
         font-size: 19px;
@@ -149,7 +229,7 @@
       }
       .navbar {
         margin-bottom: 0;
-        background-color: #f4511e;
+        background-color: #ADD8E6;
         z-index: 9999;
         border: 0;
         font-size: 12px !important;
@@ -157,10 +237,17 @@
         letter-spacing: 4px;
         border-radius: 0;
         font-family: Montserrat, sans-serif;
+        padding: 30px 0px;
       }
       .navbar li a,
       .navbar .navbar-brand {
-        color: #fff !important;
+        color: #000000 !important;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        font-weight: bolder;
+        font-stretch: normal; /* Menjaga proporsi font tetap normal */
+        letter-spacing: normal; /* Menghindari jarak antar huruf yang tidak wajar */
+        line-height: 1.2; /* Sesuaikan tinggi baris untuk keterbacaan */
       }
       .navbar-nav li a:hover,
       .navbar-nav li.active a {
@@ -169,7 +256,7 @@
       }
       .navbar-default .navbar-toggle {
         border-color: transparent;
-        color: #fff !important;
+        color: #ffffff !important;
       }
       footer .glyphicon {
         font-size: 20px;
@@ -224,8 +311,11 @@
       }
     </style>
   </head>
-  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <nav class="navbar navbar-default navbar-fixed-top">
+  <body id="myPage">
+    <div class="container-iseng">
+      <br />
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top bg-black">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -233,15 +323,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#myPage">Logo</a>
+          <img src="./assets/Tak berjudul16_20241225022225.png" class="footer-logo">
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
+            <a class="navbar-brand" style="position: absolute; margin-left: 30px;">Gentle Impact</a><br />
+            <a class="navbar-brand" style="margin-left: 30px;">A Chill Person Don't Bully Others</a>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#services">SERVICES</a></li>
-            <li><a href="#portfolio">PORTFOLIO</a></li>
-            <li><a href="#pricing">PRICING</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="./index2.html">Dashboard</a></li>
+            <li><a href="./berita.html">Berita</a></li>
+            <li><a href="./tentangkami.html">Tentang Kami</a></li>
+            <li><a>Reach Out To Us</a></li>
           </ul>
         </div>
       </div>
@@ -250,7 +341,7 @@
     <!-- Container (About Section) -->
     <div id="about" class="container-beda">
       <div class="row justify-align-center">
-        <h1 class="text-center">Tujuan Pembuatan Website</h1>
+        <h1 class="text-center">Kenalan Dengan “Gentle Impact” Yuk!</h1>
         <div class="col-sm-2">
           <br />
           </div>
@@ -294,17 +385,17 @@
     </div>
 
     <!-- Container (Services Section) -->
-    <div id="services" class="container-fluid text-center bg-grey">
+    <div id="services" class="container-fluid2 text-center bg-blue">
       <br />
       <div class="row slideanim">
         <div class="col-sm-1">
             <br />
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 bg-blue-marine container-fluid1">
           <h1>Why Chill Guy Don't Bully Others?</h1>
           <p>Seorang Chill Guy tidak akan membully orang lain karena mereka menerapkan nilai-nilai Pancasila dalam kehidupan sehari-hari. Dengan sikap ini, seorang Chill Guy menjadi pribadi yang santai, damai, dan jauh dari tindakan bullying. Ayo simak selengkapnya!</p>
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-5 container-fluid2">
           <img class="responsive2" src="./assets/Say No To Bullying.png">
         </div>
       </div>
@@ -327,25 +418,25 @@
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="thumbnail">
-            <h2>Kenali Jenis Bullying!</h2>
+          <div class="thumbnail bg-blue-marine">
+            <h1>Kenali Jenis Bullying!</h1>
             <br>
-            <p>Dengan mengenali jenis-jenis bullying, kamu menjadi selangkah lebih jauh untuk bisa mendukung kehidupan tanpa bullying. Secara ringkas, jenis-jenis bullying dapat dikategorikan menjadi 4 jenis yaitu:
-              <p>Cyberbullying</p>
-              <p>Bullying Verbal</p>
-              <p>Bullying Non-Verbal</p>
-              <p>Bullying Fisik</p>
-              <p>Pelecehan Seksual</p>
-              <p>Social Bullying</p>
+            <p class="font-montserrat">Dengan mengenali jenis-jenis bullying, kamu menjadi selangkah lebih jauh untuk bisa mendukung kehidupan tanpa bullying. Secara ringkas, jenis-jenis bullying dapat dikategorikan menjadi 4 jenis yaitu:
+              <p class="font-montserrat">Cyberbullying</p>
+              <p class="font-montserrat">Bullying Verbal</p>
+              <p class="font-montserrat">Bullying Non-Verbal</p>
+              <p class="font-montserrat">Bullying Fisik</p>
+              <p class="font-montserrat">Pelecehan Seksual</p>
+              <p class="font-montserrat">Social Bullying</p>
               </p>
           </div>
         </div>
       </div>
     </div>
       <br />
-    
-      <h2>Mau tau apa saja dampak dari Bullying?</h2>
-      <p>1. Menurunnya tingkat kepercayaan diri seseorang. <br>
+
+      <h1 style="padding: 40px 0px;" class="bg-blue-marine">Mau tau apa saja dampak dari Bullying?</h1>
+      <p style="padding: 40px 0px; margin-bottom: 100px;" class="font-montserrat bg-blue-marine">1. Menurunnya tingkat kepercayaan diri seseorang. <br>
         2. Trauma psikologis karena terkena bullying. <br>
         3. Depresi dan tingkat kecemasan yang tinggi. <br>
         4. Gangguan kesehatan fisik seperti stress. <br>
@@ -484,12 +575,29 @@
     <!-- Image of location/map -->
     <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width: 100%" />
 
-    <footer class="container-fluid text-center">
-      <a href="#myPage" title="To Top">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-      </a>
-      <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section kecil">
+          <img src="./assets/Tak berjudul16_20241225022225.png" alt="Logo" class="footer-logo2">
+          <p><strong>Gentle Impact</strong><br>A Chill Person Don't Bully Others</p>
+        </div>
+        <div class="footer-section kecil">
+          <h4>INFORMATION ABOUT US</h4>
+          <h4>KONTAK KAMI :</h4>
+          <p><a href="mailto:support@chillguy.com">Support@chillguy.com</a></p>
+        </div>
+        <div class="footer-section kecil">
+          <p>Telkom University - Kampus Jakarta<br>
+            Jl. Halimun Raya No.2, RT.15/RW.6,<br>
+            Guntur, Kecamatan Setiabudi, Kota Jakarta Selatan,<br>
+            Daerah Khusus Ibukota Jakarta 12980</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>©ChillGuy 2024 Center. All Rights Reserved</p>
+      </div>
     </footer>
+    
 
     <script>
       $(document).ready(function () {

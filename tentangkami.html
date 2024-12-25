@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Theme Made By www.w3schools.com -->
+    <title>Bootstrap Theme Company Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      .kecil {
+        font: 400 15px Montserrat, sans-serif;
+      }
+      footer {
+        background-color: #add8e6; /* Light blue */
+        color: #333;
+        font-family: Arial, sans-serif;
+        padding: 20px 0;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 10px;
+        min-width: 250px;
+      }
+
+      .footer-logo {
+        transform:scale(3.5);
+        width: 50px;
+        margin-bottom: 10px;
+      }
+      .footer-logo2 {
+        transform:scale(3);
+        width: 50px;
+        margin-bottom: 10px;
+      }
+      .foto-gentle {
+        width: 100px;
+        transform: scale(3);
+        border-radius: 90px;
+      }
+
+      .footer-section h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .footer-section p {
+        margin: 5px 0;
+      }
+
+      .footer-section a {
+        color: #007bff; /* Link color */
+        text-decoration: none;
+      }
+
+      .footer-section a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-bottom {
+        background-color: #4f99b3; /* Darker blue */
+        text-align: center;
+        padding: 10px 0;
+        color: white;
+        font-size: 14px;
+      }
+
+      body {
+        font: 400 15px Lato, sans-serif;
+        line-height: 1.8;
+        color: #818181;
+        min-height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+      }
+      h1 {
+        font-size: 24px;
+        font: 400 45px Montserrat, sans-serif;
+        color: #303030;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        color: #303030;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+      .responsive {
+        width: 100%; /* Image will span the width of its container */
+        max-width: 1600px; /* Prevents it from exceeding the original width */
+        height: auto; /* Maintains aspect ratio */
+        display: block; /* Removes inline spacing in some browsers */
+        margin: 0 auto; /* Centers the image horizontally if it's smaller than its container */
+      }
+      .responsive2 {
+        width: 100%; /* Image will span the width of its container */
+        max-width: 350px; /* Prevents it from exceeding the original width */
+        height: auto; /* Maintains aspect ratio */
+        display: block; /* Removes inline spacing in some browsers */
+        margin: 0 auto; /* Centers the image horizontally if it's smaller than its container */
+      }
+      .responsive-400 {
+        width: 100%; /* Image will span the width of its container */
+        max-width: 400px; /* Prevents it from exceeding the original width */
+        height: auto; /* Maintains aspect ratio */
+        display: block; /* Removes inline spacing in some browsers */
+        margin: 0 auto; /* Centers the image horizontally if it's smaller than its container */
+      }
+      .responsive-200 {
+        width: 100%; /* Image will span the width of its container */
+        max-width: 220px; /* Prevents it from exceeding the original width */
+        height: auto; /* Maintains aspect ratio */
+        display: block; /* Removes inline spacing in some browsers */
+        margin: 0 auto; /* Centers the image horizontally if it's smaller than its container */
+      }
+      .responsive-500 {
+        width: 100%; /* Image will span the width of its container */
+        max-width: 1000px; /* Prevents it from exceeding the original width */
+        height: auto; /* Maintains aspect ratio */
+        display: block; /* Removes inline spacing in some browsers */
+        margin: 0 auto; /* Centers the image horizontally if it's smaller than its container */
+      }
+      .container-fluid {
+        padding: 100px 0px;
+      }
+      .container-fluid1 {
+        padding: 100px 0px;
+      }
+      .container-fluid2 {
+        padding: 20px 0px;
+        margin-bottom: 100px;
+      }
+      .container-beda {
+        padding: 90px 0px;
+      }
+      .container-footer {
+        padding: 50px 0px;
+      }
+      .bg-blue {
+        background-color: #add8e6;
+      }
+      .bg-blue-marine {
+        background-color: #cae9f5b5;
+      }
+      .bg-grey {
+        background-color: #ffffff;
+      }
+
+      .navbar {
+        margin-bottom: 0;
+        background-color: #add8e6;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+        padding: 30px 0px;
+      }
+      .navbar li a,
+      .navbar .navbar-brand {
+        color: #000000 !important;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        font-weight: bolder;
+        font-stretch: normal; /* Menjaga proporsi font tetap normal */
+        letter-spacing: normal; /* Menghindari jarak antar huruf yang tidak wajar */
+        line-height: 1.2; /* Sesuaikan tinggi baris untuk keterbacaan */
+      }
+      .navbar-nav li a:hover,
+      .navbar-nav li.active a {
+        color: #f4511e !important;
+        background-color: #fff !important;
+      }
+      .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;
+      }
+      .slideanim {
+        visibility: hidden;
+      }
+      .slide {
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        visibility: visible;
+      }
+      @keyframes slide {
+        0% {
+          opacity: 0;
+          transform: translateY(70%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+      @-webkit-keyframes slide {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(70%);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0%);
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .col-sm-4 {
+          text-align: center;
+          margin: 25px 0;
+        }
+        .btn-lg {
+          width: 100%;
+          margin-bottom: 35px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .logo {
+          font-size: 150px;
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      }
+    </style>
+  </head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top bg-black">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="./assets/Tak berjudul16_20241225022225.png" class="footer-logo">
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <a class="navbar-brand" style="position: absolute; margin-left: 30px;">Gentle Impact</a><br />
+            <a class="navbar-brand" style="margin-left: 30px;">A Chill Person Don't Bully Others</a>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="./index2.html">Dashboard</a></li>
+            <li><a href="./berita.html">Berita</a></li>
+            <li><a href="./tentangkami.html">Tentang Kami</a></li>
+            <li><a>Reach Out To Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-footer bg-blue-marine">
+
+    </div>
+
+    <div id="about" class="container-beda">
+        <div class="row justify-align-center">
+          <h1 class="text-center">Ayo Kenal Lebih Dekat Dengan Tim Gentle Impact!</h1>
+          <div class="col-sm-2">
+            <br />
+            </div>
+            <div class="col-sm-8">
+                  <h4 class="text-center">    
+                    Kami adalah mahasiswa Telkom University Kampus Jakarta angkatan 2024, Program Studi S1 Teknologi Informasi, Fakultas Informatika. Website ini dibuat dengan bertujuan untuk menciptakan ruang aman untuk kalian bercerita karena kami sangat peduli terhadap tingkat bullying di Indonesia dan berharap tidak ada lagi korban bully.
+                  </h4>
+                  <br />
+                  </div>
+                  <div class="col-sm-2">
+                      <br />
+                      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="about" class="container-footer">
+        <div class="row justify-align-center">
+          <div class="col-sm-2">
+            <br />
+            </div>
+            <div class="col-sm-2">
+                <img src="./assets/foto khansa.jpg" class="foto-gentle">
+                <br />
+                </div>
+            <div class="col-sm-6">
+                  <h4 class="text-center">    
+                    Khansa Farah Fitriani, adalah sosok yang selalu bisa diandalkan, baik sebagai ketua kelas maupun teman sehari-hari. Ia punya jiwa kepemimpinan yang alami, tapi tetap rendah hati dan dekat dengan semua orang. Salah satu hal yang paling keren tentang dia adalah kreatifitas idenya, salah satunya adalah untuk membuat website Gentle Impact. Ide itu muncul dari kepeduliannya terhadap teman-teman yang mungkin butuh tempat aman untuk berbicara atau sekadar merasa didukung, dan dengan kreativitas dan semangatnya, ia berharap bisa mengajak banyak orang untuk terlibat dalam gerakan ini.
+                  </h4>
+                  <br />
+                  </div>
+                  <div class="col-sm-2">
+                    <br />
+                    </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <div class="row justify-align-center">
+            <div class="col-sm-2">
+              <br />
+              </div>
+              <div class="col-sm-6">
+                <h4 class="text-center">    
+                    Aurellia Fira Artanti, Sebagai desainer utama, Aurel dikenal sebagai sosok kreatif yang bertanggung jawab merancang tampilan website agar menarik, ramah, dan nyaman bagi pengunjung. Dengan perhatian mendalam terhadap detail, setiap elemen yang ia ciptakan dirancang untuk mendukung tujuan utama website Gentle Impact. Selain itu, Aurel juga memimpin pembuatan logo sebagai identitas utama proyek ini. Dalam prosesnya, ia bekerja sama dengan Khansa, yang memberikan ide segar dan sentuhan kreatif, sehingga logo yang dihasilkan tidak hanya indah secara visual tetapi juga memiliki makna mendalam yang mencerminkan nilai dan visi Gentle Impact.
+                  </h4>
+                  <br />
+                  </div>
+              <div class="col-sm-1">
+                <br />
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="./assets/foto aurel1.jpg" class="foto-gentle">
+                            </div>
+                </div>
+                <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <div class="row justify-align-center">
+            <div class="col-sm-2">
+              <br />
+              </div>
+              <div class="col-sm-2">
+                  <img src="./assets/foto pandora.jpg" class="foto-gentle">
+                  <br />
+                  </div>
+              <div class="col-sm-6">
+                    <h4 class="text-center">    
+                        Daniswara Rafi Pandora, adalah seorang pengembang yang ahli dalam pengembangan BackEnd dan pengelolaan basis data. Dalam proyek ini, ia bertanggung jawab sepenuhnya atas bagian backend, termasuk pengaturan struktur data, logika sistem, dan integrasi berbagai fitur. Pandora memastikan setiap fungsi di dalam website, seperti navigasi pengguna, pengolahan data formulir interaktif, dan penyimpanan informasi, berjalan dengan lancar dan aman. Dengan dedikasi dan keahliannya, ia tidak hanya memastikan semua aspek berjalan tanpa kendala tetapi juga memberikan pengalaman pengguna yang nyaman dan efisien, menjadikan website ini kokoh dan andal.
+                    </h4>
+                    <br />
+                    </div>
+                    <div class="col-sm-2">
+                      <br />
+                      </div>
+                </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="row justify-align-center">
+                <div class="col-sm-2">
+                  <br />
+                  </div>
+                  <div class="col-sm-6">
+                    <h4 class="text-center">    
+                        Maisan Hanif Dharmawan, memegang peran penting dalam menyusun konten. Ia dengan teliti mengumpulkan informasi, menyusun artikel edukatif, dan memastikan setiap kata di website memberikan pesan yang jelas dan bermakna. Berkat kemampuannya, website ini tidak hanya memberikan informasi, tetapi juga menjadi sumber inspirasi bagi penggunanya. Selain itu, Hanif juga membantu dalam pembuatan website loh! Ia juga memastikan setiap fungsi website berjalan lancar, dan tidak terjadi kesalahan sebelum diterima oleh kalian!
+                      </h4>
+                      <br />
+                      </div>
+                  <div class="col-sm-1">
+                    <br />
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./assets/foto maisan.jpg" class="foto-gentle">
+                                </div>
+                    </div>
+                    <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="row justify-align-center">
+                <div class="col-sm-2">
+                  <br />
+                  </div>
+                  <div class="col-sm-2">
+                      <img src="./assets/IMG_9437.JPG" class="foto-gentle">
+                      <br />
+                      </div>
+                  <div class="col-sm-6">
+                        <h4 class="text-center">    
+                            Dhafa Pratama, sebagai pengembang ide dan mengurus pemahaman akan algoritma. Dhafa juga merupakan pribadi yang aktif akan kegiatan sosial serta pintar akan sistem matematis. Selain ikut andil dalam pembuatan website, dia juga menjadi pengumpul data yang ditampilkan pada website kami agar tidak ketinggalan berita seputar bullying. Menurutnya, kasus bullying harus segera dituntaskan dan sebagai mahasiswa prodi teknologi informasi, hal yang pertama kali dipikirkan adalah pembuatan website Gentle Impact. 
+                        </h4>
+                        <br />
+                        </div>
+                        <div class="col-sm-2">
+                          <br />
+                          </div>
+                    </div>
+                    <br />
+            <br />
+            <br />
+            <br />
+              </div>
+            </div>
+        </div>
+      </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section kecil">
+          <img src="./assets/Tak berjudul16_20241225022225.png" class="footer-logo2" />
+          <p><strong>Gentle Impact</strong><br />A Chill Person Don't Bully Others</p>
+        </div>
+        <div class="footer-section kecil">
+          <h4>INFORMATION ABOUT US</h4>
+          <h4>KONTAK KAMI :</h4>
+          <p><a href="mailto:support@chillguy.com">Support@chillguy.com</a></p>
+        </div>
+        <div class="footer-section kecil">
+          <p>
+            Telkom University - Kampus Jakarta<br />
+            Jl. Halimun Raya No.2, RT.15/RW.6,<br />
+            Guntur, Kecamatan Setiabudi, Kota Jakarta Selatan,<br />
+            Daerah Khusus Ibukota Jakarta 12980
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>©ChillGuy 2024 Center. All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              900,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+
+        $(window).scroll(function () {
+          $(".slideanim").each(function () {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+              $(this).addClass("slide");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
